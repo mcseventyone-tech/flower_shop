@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Админка Flower Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Админка: добавить букет</h1>
+<form method="post">
+    <input type="text" name="name" placeholder="Название букета" required>
+    <input type="text" name="image" placeholder="Ссылка на изображение" required>
+    <button type="submit">Добавить</button>
+</form>
+
+<h2>Текущие букеты</h2>
+<ul>
+    {% for bouquet in bouquets %}
+    <li>{{ bouquet.name }} — {{ bouquet.image }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
